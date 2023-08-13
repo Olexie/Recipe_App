@@ -1,1 +1,2 @@
 # Recipe_App
+A python web application built using Django framework. Where users can sign in, create their account and able to view the list of recipes. They can search for a recipe bu the ingredient/s and create a recipe of their own
