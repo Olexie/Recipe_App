@@ -18,17 +18,17 @@
 <body>
   <div>
     <h2>{{object.name}}</h2>
-    <img class ="recipe_image" src="{{object.pic.url}}" />
+  
     <div>
       <div>
         <b>Name: </b> {{object.name}} <br />
-        <b>Description: </b> {{object.description}} <br />
         <b>Cooking Time: </b> {{object.cooking_time}} <br />
         <b>Difficulty: </b> {{object.calculate_difficulty}} <br />
         <b>Ingredients: </b> {{object.ingredients}} <br />
+        <b>Description: </b> {{object.description}} <br />
+        
       </div>
 
     </div>
-
-
+    <img src="{{object.pic.url}} width="400" height="600" "/>
 </html>
