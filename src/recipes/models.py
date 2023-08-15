@@ -6,6 +6,8 @@ class Recipe(models.Model):
     name = models.CharField(max_length=120)
     cooking_time= models.FloatField(help_text=' minutes')
     ingredients =models.CharField(max_length=300, help_text=' please separate ingredients with commas')
+    description = models.TextField(default='add your notes here')
+    pic = models.ImageField(upload_to='recipes', default='no_picture.jpg')
 
     def calculate_difficulty(self):
         ingredients = self.ingredients.split(', ')

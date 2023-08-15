@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recipe_App</title>
+    <title>List of Recipes</title>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <style>
+      body {
+        background: url("{% static 'recipes/images/background' %}") no-repeat
+          fixed;
+        background-size: cover;
+      }
+
+      h1,
+      h3 {
+        color: #0c0908;
+        font-family: font-family: 'Bree Serif', sans-serif;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="recipe_grid">
+      {% for object in object_list %}
+      <div class="grid_item">
+        <h3>
+          <a href="{{object.get_absolute_url}}"> {{object.name}} </a>
+        </h3>
+        <img src="{{object.pic.url}}" />
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
