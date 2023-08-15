@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Recipe_App</title>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css">
+  <style type="text/css">
+    body {
+      background: url("{% static 'recipes/images/background.jpg' %}") no-repeat fixed;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h2>{{object.name}}</h2>
+    <img class ="recipe_image" src="{{object.pic.url}}" />
+    <div>
+      <div>
+        <b>Name: </b> {{object.name}} <br />
+        <b>Description: </b> {{object.description}} <br />
+        <b>Cooking Time: </b> {{object.cooking_time}} <br />
+        <b>Difficulty: </b> {{object.calculate_difficulty}} <br />
+        <b>Ingredients: </b> {{object.ingredients}} <br />
+      </div>
+
+    </div>
+
+
+</html>
