@@ -11,7 +11,7 @@
     />
     <style>
       body {
-        background: url("{% static 'recipes/images/background' %}") no-repeat
+        background: url("{% static 'recipes/images/background.jpg' %}") no-repeat
           fixed;
         background-size: cover;
       }
@@ -26,7 +26,12 @@
   </head>
 
   <body>
-    <div><a href="{%url 'logout' %}">Logout</a></div>
+    <div>
+      <a class="login_btn" href="{%url 'recipes:search' %}">Search</a>
+      <a class="login_btn" href="{%url 'recipes:list' %}">Recipes</a>
+      <a class="login_btn" href="{%url 'recipes:create' %}">Create</a>
+      <a href="{%url 'logout' %}">Logout</a>
+    </div>
     <div class="recipe_grid">
       {% for object in object_list %}
       <div class="grid_item">

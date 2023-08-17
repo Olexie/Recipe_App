@@ -17,6 +17,9 @@
 <body>
   <div>
     <a href ="{%url 'logout' %}">  Logout  </a>
+    <a class="login_btn" href="{%url 'recipes:search' %}">Search</a>
+    <a class="login_btn" href="{%url 'recipes:list' %}">Recipes</a>
+    <a class="login_btn" href="{%url 'recipes:create' %}">Create</a>
   </div>
   <div>
     <h2>{{object.name}}</h2>

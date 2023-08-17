@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RecipeApp: Your Recipes</title>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <link rel="stylesheet" type="text/css" />
+    <style>
+      body {
+        background: url("{% static 'recipes/images/background.jpg' %}")
+          no-repeat fixed;
+        background-size: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <a class="login_btn" href="{%url 'logout' %}">Logout</a>
+      <a class="login_btn" href="{%url 'recipes:search' %}">Search</a>
+      <a class="login_btn" href="{%url 'recipes:create' %}">Create</a>
+      <a class="login_btn" href="{%url 'recipes:list' %}">Recipes</a>
+    </div>
+    <div class="create_block">
+      <h1>Add Your Own Recipe</h1>
+      <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %} {{create_form.as_p}}
+        <button type="submit">Add</button>
+      </form>
+      <div class="details_long">
+        <a href="{% url 'recipes:list' %}">Go Back</a>
+      </div>
+    </div>
+  </body>
+</html>
