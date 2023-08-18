@@ -14,7 +14,7 @@ DIFFICULTY__CHOICES = (
 )
 
 class DifficultySearchForm(forms.Form):
-    ecipe_diff = forms.ChoiceField(choices=DIFFICULTY__CHOICES)
+    recipe_diff = forms.ChoiceField(choices=DIFFICULTY__CHOICES)
     chart_type = forms.ChoiceField(choices=CHART__CHOICES)
 
 class CreateRecipeForm(forms.Form):

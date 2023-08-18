@@ -19,7 +19,7 @@ def login_view(request):
             if user is not None:
                 login(request, user)
                 return redirect('recipes:list')
-            else:
+        else:
                error_message = 'something went wrong'
 
     context = {
